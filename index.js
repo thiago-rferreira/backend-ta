@@ -7,13 +7,13 @@ const app = express();
 app.use(express.json()); // Middleware para lidar com JSON
 
 // Rota de teste para conexão ao banco de dados
-app.get('/teste', (req, res) => {
+app.get('/', (req, res) => {
   res.send('API funcionando!');
 });
 
 // Usando as rotas dos artigos e do quiz
-app.use('/api', artigoRoutes);
-app.use('/api', quizRoutes);
+app.use('/', artigoRoutes);
+app.use('/', quizRoutes);
 
 // Iniciando o servidor
 const PORT = 3003;
