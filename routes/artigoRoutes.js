@@ -4,7 +4,9 @@ const artigoController = require('../controllers/artigoController');
 const router = express.Router();
 
 router.post('/artigos', artigoController.criarArtigo);
-
-// Outras rotas para listar, atualizar e excluir artigos
+router.get('/artigos', artigoController.listarArtigos);
+router.get('/artigos/:id', artigoController.obterArtigoPorId);
+router.put('/artigos/:id', artigoController.atualizarArtigo);
+router.delete('/artigos/:id', artigoController.deletarArtigo);
 
 module.exports = router;
