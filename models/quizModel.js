@@ -32,6 +32,12 @@ const Quiz = {
     const result = await pool.query('DELETE FROM quiz WHERE id = $1 RETURNING *', [id]);
     return result.rows[0];
   },
+
+  getRandomTen: async () => {
+    const result = await pool.query('SELECT * FROM quiz ORDER BY RANDOM() LIMIT 10');
+    return result.rows;
+  },
+  
 };
 
 module.exports = Quiz;

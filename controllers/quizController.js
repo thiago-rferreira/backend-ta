@@ -65,6 +65,16 @@ const quizController = {
       res.status(500).send('Erro ao deletar quiz');
     }
   },
+
+  listarQuizAleatorios: async (req, res) => {
+    try {
+      const quizzes = await Quiz.getRandomTen();
+      res.status(200).json(quizzes);
+    } catch (err) {
+      console.error(err);
+      res.status(500).send('Erro ao buscar quizzes aleatórios');
+    }
+  },
 };
 
 module.exports = quizController;

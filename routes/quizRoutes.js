@@ -8,5 +8,6 @@ router.get('/quiz', quizController.listarQuiz);
 router.get('/quiz/:id', quizController.obterQuizPorId);
 router.put('/quiz/:id', quizController.atualizarQuiz);
 router.delete('/quiz/:id', quizController.deletarQuiz);
+router.get('/quiz-aleatorios', quizController.listarQuizAleatorios); // Pega 10 perguntas aleatórias
 
 module.exports = router;
