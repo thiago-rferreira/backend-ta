@@ -1,0 +1,16 @@
+{
+  "name": "back-end-ta",
+  "version": "1.0.0",
+  "description": "1. Configuração do ambiente # Primeiro, certifique-se de que você tenha o Node.js, PostgreSQL e o gerenciador de pacotes npm instalados em sua máquina.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "express": "^4.21.1",
+    "pg": "^8.13.0"
+  }
+}
